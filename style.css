@@ -1,0 +1,111 @@
+:root{
+    --font-color: white;
+    --font-fam: Arial, Helvetica, sans-serif;
+}
+@font-face {
+    font-family: psychlone;
+    src: url(fonts/Psychlone.otf);
+}
+@font-face {
+    font-family: cmu;
+    src: url(fonts/cmunbi.ttf);
+}
+@font-face {
+    font-family: bisquine;
+    src: url(fonts/Bisquine\ Trial.otf);
+}
+*{
+    margin: 0;
+
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: minmax(90px, 1fr) minmax(35vh, 4fr);
+}
+.header{
+    grid-column: 2/-1;
+    grid-row: 1/2;
+}
+.main{
+
+    color: var(--font-color);
+    background-color: red;
+    display: grid;
+    grid-template: repeat(2, minmax(50%, 1fr))/ 4fr 1fr;
+}
+.article{
+    grid-column: 1/2;
+    grid-row: 1/-1;
+}
+.announcement{
+    grid-column: 2/3;
+    border: 1px solid blue;
+    grid-row: 1/2;
+    overflow: auto;
+    background-color: green;
+}
+.trending{
+    grid-column: 2/3;
+    background-color: black;
+    border: 1px solid black;
+    grid-row: 2/-1;
+}
+.sidebar .dashboard-img{
+    width: 50px;
+    height: 50px;
+}
+.sidebar{
+    display: flex;
+    gap: 1px;
+    flex-direction: column;
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    background-color: rgb(41, 147, 241);
+    color: white;
+}
+.sidebar .dashboard{
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: var(cmu);
+}
+.sidebar .home{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: ;
+    font-size: 1.3rem;
+    font-family: cmu;
+    padding: 15px;
+    list-style: none;
+}
+.sidebar .home li{
+    display: flex;
+    gap: 10px;
+    height: clamp(23px, 10vh, 40px);
+}
+.sidebar img{
+    width: 25px;
+    height: 25px;
+}
+.sidebar .settings li{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: clamp(20px, 10vh, 40px);
+}
+.sidebar .settings{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 1.3rem;
+    font-family: cmu;
+    padding: 15px;
+    list-style: none;
+}
